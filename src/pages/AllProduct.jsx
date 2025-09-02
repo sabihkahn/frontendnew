@@ -74,7 +74,7 @@ const AllProduct = () => {
   return (
     <>
       {/* Search bar */}
-      <div className="flex items-center gap-2 mt-10 mb-6 bg-white rounded-xl shadow-md px-3 py-2 border border-gray-200">
+      <div className="flex items-center relative gap-0 mt-10 mb-6 bg-white rounded-xl shadow-md px-3 py-2 border border-gray-200">
         <input
           value={finditem}
           onChange={(e) => setFinditem(e.target.value)}
@@ -84,7 +84,7 @@ const AllProduct = () => {
         />
         <button
           onClick={handleSearch}
-          className="bg-gradient-to-r from-gray-800 to-black text-white px-5 py-2 rounded-lg hover:opacity-90 transition"
+          className="bg-gradient-to-r  from-gray-800 to-black text-white px-5 py-2 rounded-lg hover:opacity-90 transition"
         >
           Search
         </button>
@@ -92,7 +92,7 @@ const AllProduct = () => {
         {/* Mobile filter toggle button */}
         <button
           onClick={() => setShowFilter(true)}
-          className="sm:hidden bg-gray-900 text-white px-4 py-2 rounded-lg ml-2"
+          className="absolute right-30   sm:hidden bg-gray-900 text-white px-4 py-2 rounded-lg ml-2"
         >
           Filters
         </button>
