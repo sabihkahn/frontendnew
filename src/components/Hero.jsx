@@ -2,6 +2,7 @@ import React from 'react'
 import ClothesBanner from './ClothesBanner'
 import MovingText from './MovingText'
 import MyProducts from './MyProducts'
+import OrderAnimation from './OrderAnimation'
 
 const Hero = () => {
     return (
@@ -10,6 +11,7 @@ const Hero = () => {
             <ClothesBanner />
             <MovingText />
             <MyProducts />
+            <OrderAnimation />
         </div>
     )
 }

@@ -23,9 +23,7 @@ const MyProducts = () => {
             Comfortable and stylish yellow shoes perfect for any occasion.
             Lightweight, durable, and designed to fit perfectly.
           </p>
-          <button className="mt-4 bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-300">
-            Shop Now
-          </button>
+          
         </div>
 
         {/* Product Image */}
@@ -78,9 +76,7 @@ const MyProducts = () => {
             Comfortable and stylish yellow shoes perfect for any occasion.
             Lightweight, durable, and designed to fit perfectly.
           </p>
-          <button className="mt-4 bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:shadow-lg transition-all duration-300">
-            Shop Now
-          </button>
+         
         </div>
 
         {/* Product Image */}
