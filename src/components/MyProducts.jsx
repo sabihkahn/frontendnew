@@ -1,7 +1,7 @@
-import React from 'react';
-import redshoes from '../assets/red.jpg';
-import greenshoes from '../assets/green.jpg';
-import yellowshoes from '../assets/yello.jpg';
+import React from "react";
+import redshoes from "../assets/red.jpg";
+import greenshoes from "../assets/green.jpg";
+import yellowshoes from "../assets/yello.jpg";
 
 const MyProducts = () => {
   const images = [
@@ -11,77 +11,98 @@ const MyProducts = () => {
   ];
 
   return (
-    <div className="w-full px-4 md:px-12 lg:px-20 py-12 bg-gray-50">
-      {/* Main Featured Product */}
-      <div className="max-w-6xl mx-auto h-auto md:h-[70vh] bg-white text-black flex flex-col md:flex-row items-center justify-between p-8 gap-8 shadow-xl rounded-2xl overflow-hidden hover:shadow-4xl transition-shadow duration-500">
-        {/* Text Content */}
-        <div className="md:w-1/2 flex flex-col items-center md:items-start justify-center gap-5 text-center md:text-left">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
-            Yellow Shoes
-          </h2>
-          <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-md">
-            Comfortable and stylish yellow shoes perfect for any occasion.
-            Lightweight, durable, and designed to fit perfectly.
+    <div className="w-full bg-gradient-to-b from-gray-100 via-white to-gray-50">
+      {/* Hero Section */}
+      <section className="relative w-full h-[80vh] flex flex-col md:flex-row items-center justify-between px-6 md:px-16 lg:px-28 py-12">
+        <div className="flex flex-col gap-6 text-center md:text-left md:w-1/2">
+          <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">
+            Step Into <span className="text-yellow-500">Style</span>
+          </h1>
+          <p className="text-lg md:text-xl text-gray-600 max-w-md mx-auto md:mx-0">
+            Discover our premium shoe collection designed for comfort, fashion,
+            and durability. Perfect for every step you take.
           </p>
-          
         </div>
-
-        {/* Product Image */}
-        <div className="md:w-1/2 flex justify-center items-center">
+        <div className="flex justify-center items-center mt-10 md:mt-0 md:w-1/2">
           <img
-            src={redshoes}
+            src={yellowshoes}
             alt="Yellow Shoes"
-            className="h-72 md:h-80 lg:h-96 w-auto rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"
+            className="h-72 md:h-96 w-auto rounded-3xl shadow-xl hover:scale-105 transition-transform duration-300"
           />
         </div>
-      </div>
+      </section>
 
-      {/* Other Products */}
-      <div className="w-full mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {images.map((src, index) => (
-          <div
-            key={index}
-            className="bg-white flex flex-col items-center justify-center rounded-xl border border-gray-500 shadow-md hover:shadow-xl transition-shadow duration-300 p-6 group"
-          >
-            <div className="w-full flex justify-center items-center overflow-hidden rounded-lg">
+      {/* Featured Product */}
+      <section className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-16">
+        <div className="bg-white rounded-2xl shadow-xl flex flex-col md:flex-row items-center gap-8 p-8 hover:shadow-2xl transition">
+          {/* Text */}
+          <div className="md:w-1/2 flex flex-col gap-5 text-center md:text-left">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+              Red Shoes
+            </h2>
+            <p className="text-gray-600 text-base md:text-lg leading-relaxed">
+              Bold and stylish red shoes built for all-day wear. Add a pop of
+              color to your outfit while staying comfortable.
+            </p>
+          </div>
+          {/* Image */}
+          <div className="md:w-1/2 flex justify-center">
+            <img
+              src={redshoes}
+              alt="Red Shoes"
+              className="h-72 md:h-96 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Product Grid */}
+      <section className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-12">
+        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">
+          Our Collection
+        </h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {images.map((src, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 flex flex-col items-center group"
+            >
               <img
                 src={src}
                 alt={`Product ${index + 1}`}
-                className="w-56 h-56 object-cover rounded-lg shadow-md group-hover:scale-110 transition-transform duration-300"
+                className="w-56 h-56 object-cover rounded-lg shadow group-hover:scale-110 transition-transform duration-300"
               />
+              <h4 className="mt-5 text-lg font-semibold text-gray-800">
+                Jordan Boots
+              </h4>
             </div>
-            <h4 className="mt-5 w-full  text-black font-semibold py-2 rounded-full transition text-center">
-             Jorden boots 
-            </h4>
+          ))}
+        </div>
+      </section>
+
+      {/* Another Featured */}
+      <section className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-16">
+        <div className="bg-white rounded-2xl shadow-xl flex flex-col md:flex-row items-center gap-8 p-8 hover:shadow-2xl transition">
+          {/* Image */}
+          <div className="md:w-1/2 flex justify-center">
+            <img
+              src={greenshoes}
+              alt="Green Shoes"
+              className="h-72 md:h-96 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"
+            />
           </div>
-        ))}
-
-
-      </div>
-
-       <div className="max-w-6xl mx-auto h-auto md:h-[70vh] bg-white text-black flex flex-col md:flex-row items-center justify-between p-8 gap-8 shadow-xl rounded-2xl overflow-hidden hover:shadow-4xl transition-shadow duration-500">
-        <div className="md:w-1/2 flex justify-center items-center">
-          <img
-            src={greenshoes}
-            alt="Yellow Shoes"
-            className="h-72 md:h-80 lg:h-96 w-auto rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"
-          />
+          {/* Text */}
+          <div className="md:w-1/2 flex flex-col gap-5 text-center md:text-left">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+              Green Shoes
+            </h2>
+            <p className="text-gray-600 text-base md:text-lg leading-relaxed">
+              Fresh and sleek green shoes crafted for style and strength.
+              Perfect for casual and sporty vibes.
+            </p>
+          </div>
         </div>
-        {/* Text Content */}
-        <div className="md:w-1/2 flex flex-col items-center md:items-start justify-center gap-5 text-center md:text-left">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
-           Green Shoes
-          </h2>
-          <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-md">
-            Comfortable and stylish yellow shoes perfect for any occasion.
-            Lightweight, durable, and designed to fit perfectly.
-          </p>
-         
-        </div>
-
-        {/* Product Image */}
-      </div>
-
+      </section>
     </div>
   );
 };

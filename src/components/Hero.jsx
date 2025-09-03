@@ -3,6 +3,7 @@ import ClothesBanner from './ClothesBanner'
 import MovingText from './MovingText'
 import MyProducts from './MyProducts'
 import OrderAnimation from './OrderAnimation'
+import Notebook3D from './Notebook3D'
 
 const Hero = () => {
     return (
@@ -10,8 +11,9 @@ const Hero = () => {
 
             <ClothesBanner />
             <MovingText />
+          
             <MyProducts />
-            <OrderAnimation />
+       
         </div>
     )
 }
