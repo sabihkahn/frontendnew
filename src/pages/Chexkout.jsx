@@ -120,7 +120,8 @@ const Chexkout = () => {
   return (
     <>
       <Navbar />
-      <div className="flex mt-8 justify-center items-center min-h-screen bg-gray-100 p-4">
+          <h1 className="text-4xl  font-bold text-center mb-0 text-gray-900">Cash on delivery</h1>
+      <div className="flex mt-2 justify-center items-center min-h-screen bg-gray-100 p-4">
         <div className="w-full max-w-lg bg-white shadow-2xl rounded-2xl p-8">
           <h1 className="text-2xl font-bold text-center mb-6 text-gray-900">
             Checkout
