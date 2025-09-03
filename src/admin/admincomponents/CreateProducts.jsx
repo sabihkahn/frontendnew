@@ -174,7 +174,7 @@ export default function CreateProduct() {
             <button
               type="button"
               onClick={handleMainImageUpload}
-              className="bg-black text-white px-2 right-2 relative py-2 rounded-xl hover:bg-gray-800 transition"
+              className="bg-black text-white px-2 right-16 relative py-2 rounded-xl hover:bg-gray-800 transition"
             >
               Upload
             </button>
@@ -281,7 +281,7 @@ export default function CreateProduct() {
             <button
               type="button"
               onClick={handleExtraImagesUpload}
-              className="bg-black text-white relative right-7 px-4 py-2 rounded-xl hover:bg-gray-800 transition"
+              className="bg-black text-white relative right-20  px-4 py-2 rounded-xl hover:bg-gray-800 transition"
             >
               Upload
             </button>
