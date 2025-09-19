@@ -105,48 +105,49 @@ const AllProduct = () => {
         </div>
 
         {/* Product list */}
-        <div className="w-full sm:w-[80%] h-[80vh] overflow-y-scroll grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 pr-2">
-          {products &&
-          products.length === 0 ? (
-            <p className="text-gray-500">No products found.</p>
-          ) : (
-            products.map((item) => (
-              <div
-                key={item._id}
-                className="bg-white h-[53vh] rounded-2xl shadow-md hover:shadow-2xl transition-transform duration-300 hover:-translate-y-2 flex flex-col border border-gray-100"
-              >
-                <img
-                  src={item.img}
-                  className="h-52 w-full object-cover rounded-t-2xl"
-                  alt={item.name}
-                />
-                <div className="p-5 flex flex-col flex-grow">
-                  <h1 className="font-semibold text-lg text-gray-800">
-                    {item.name}
-                  </h1>
-                  <p className="text-gray-500 text-sm flex-grow mt-1 line-clamp-2">
-                    {item.description}
-                  </p>
-                  <div className="mt-3 flex items-center justify-between">
-                    <span className="text-lg font-bold text-gray-900">
-                      ${item.price}
-                    </span>
-                    <span className="text-xs text-gray-400">
-                      Stock: {item.stock}
-                    </span>
-                  </div>
-                  <button
-                    onClick={() => handleNavigate(item)}
-                    className="mt-5 bg-gradient-to-r from-gray-900 to-black text-white px-4 py-2 rounded-lg hover:opacity-90 transition"
-                  >
-                    View Details
-                  </button>
-                </div>
-              </div>
-            )))}
+        <div className="col-span-3 h-[80vh] overflow-y-scroll pr-2">
+  <div className="grid grid-cols-2 sm:grid-cols-2 gap-6">
+    {products && products.length === 0 ? (
+      <p className="text-gray-500">No products found.</p>
+    ) : (
+      products.map((item) => (
+        <div
+          key={item._id}
+          className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-transform duration-300 hover:-translate-y-2 flex flex-col border border-gray-100"
+        >
+          <img
+            src={item.img}
+            className="h-60 w-auto object-cover rounded-t-2xl"
+            alt={item.name}
+          />
+          <div className="p-5 flex flex-col flex-grow">
+            <h1 className="font-semibold text-lg md:text-xl text-gray-800">
+              {item.name}
+            </h1>
+            <p className="text-gray-500 text-sm flex-grow mt-1 line-clamp-2">
+              {item.description}
+            </p>
+            <div className="mt-3 flex items-center justify-between">
+              <span className="text-lg font-bold text-gray-900">
+                ${item.price}
+              </span>
+              <span className="text-xs text-gray-400">
+                Stock: {item.stock}
+              </span>
+            </div>
+            <button
+              onClick={() => handleNavigate(item)}
+              className="mt-5 bg-gradient-to-r from-gray-900 to-black text-white px-4 py-2 rounded-lg hover:opacity-90 transition"
+            >
+              View Details
+            </button>
+          </div>
         </div>
-      </div>
-
+      ))
+    )}
+  </div>
+</div>
+</div>
       {/* Mobile filter drawer */}
       <div
         ref={filterRef}
