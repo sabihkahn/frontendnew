@@ -117,23 +117,19 @@ const AllProduct = () => {
         >
           <img
             src={item.img}
-            className="h-60 w-auto object-cover rounded-t-2xl"
+            className="h-32 w-auto object-cover rounded-t-2xl"
             alt={item.name}
           />
           <div className="p-5 flex flex-col flex-grow">
             <h1 className="font-semibold text-lg md:text-xl text-gray-800">
               {item.name}
             </h1>
-            <p className="text-gray-500 text-sm flex-grow mt-1 line-clamp-2">
-              {item.description}
-            </p>
+            
             <div className="mt-3 flex items-center justify-between">
               <span className="text-lg font-bold text-gray-900">
                 ${item.price}
               </span>
-              <span className="text-xs text-gray-400">
-                Stock: {item.stock}
-              </span>
+             
             </div>
             <button
               onClick={() => handleNavigate(item)}
