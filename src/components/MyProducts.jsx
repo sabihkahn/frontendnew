@@ -135,7 +135,7 @@ const MyProducts = () => {
             >
               <img
                 src={item.img}
-                className="w-full h-48 object-cover rounded-t-2xl"
+                className="w-full h-52 object-cover rounded-t-2xl"
                 alt={item.name}
               />
               <div className="p-5 flex flex-col flex-grow">
@@ -164,27 +164,14 @@ const MyProducts = () => {
 
       {/* Featured Video */}
       <section className="relative w-full max-w-7xl mx-auto px-6 py-16">
-        <video
-          ref={(el) => (videoRefs.current[1] = el)}
-          src={diliver}
-          loop
-          muted
-          playsInline
-          className="rounded-2xl w-full object-cover shadow-lg"
-        />
+        
 
         {/* Text Overlay */}
         <div className="absolute inset-0 flex flex-col justify-center items-center text-center rounded-2xl px-6">
           <h2 className="text-4xl md:text-6xl font-extrabold text-white leading-tight drop-shadow-2xl tracking-wide">
             Trust is What <span className="text-yellow-400">Builds Us</span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-200 mt-6 max-w-2xl font-light leading-relaxed">
-            We believe in <span className="font-semibold text-yellow-300">quality</span>,
-            <span className="font-semibold text-yellow-300"> satisfaction</span>, and
-            <span className="font-semibold text-yellow-300"> trust</span>. <br />
-            Your journey with us is more than just shopping — <br />
-            it’s a <span className="italic text-yellow-400">lifestyle</span>.
-          </p>
+         
         </div>
       </section>
 
